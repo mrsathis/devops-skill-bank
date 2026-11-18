@@ -1,0 +1,109 @@
+site_name: DevOps & SRE Skill Bank
+site_description: Notes, runbooks and hands-on skills in DevOps, SRE, Kubernetes and multi-cloud.
+# Change YOUR_GITHUB_USERNAME to your GitHub username (lowercase)
+site_url: https://YOUR_GITHUB_USERNAME.github.io/devops-skill-bank/
+repo_url: https://github.com/YOUR_GITHUB_USERNAME/devops-skill-bank
+repo_name: devops-skill-bank
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/server-network
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - toc.follow
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - About me: about.md
+  - Kubernetes:
+      - kubernetes/index.md
+      - kubectl troubleshooting: kubernetes/kubectl-troubleshooting.md
+  - Cloud:
+      - cloud/index.md
+      - AWS: cloud/aws.md
+      - Azure: cloud/azure.md
+      - GCP: cloud/gcp.md
+  - SRE:
+      - sre/index.md
+      - SLOs & error budgets: sre/slos-and-error-budgets.md
+      - Incident response: sre/incident-response.md
+      - Postmortem template: sre/postmortem-template.md
+  - CI/CD:
+      - GitHub Actions: ci-cd/github-actions.md
+  - Infrastructure as Code:
+      - Terraform: iac/terraform.md
+  - Linux:
+      - Troubleshooting: linux/troubleshooting.md
+  - Security:
+      - security/index.md
+  - Templates:
+      - Skill note template: note-template/skill-note.md
+  - Tags: tags.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/YOUR_GITHUB_USERNAME
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/YOUR_LINKEDIN/
+
+copyright: Copyright &copy; 2026 · Built with MkDocs Material, hosted free on GitHub Pages
