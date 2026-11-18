@@ -1,0 +1,148 @@
+{% extends "main.html" %}
+
+{#- Custom landing page for the skill bank. Used by docs/index.md (template: home.html). -#}
+
+{% block tabs %}
+  {{ super() }}
+  <section class="sb-hero" aria-labelledby="sb-hero-title">
+    <div class="sb-hero__inner md-grid">
+      <div class="sb-hero__copy">
+        <p class="sb-eyebrow">DevOps · SRE · Kubernetes · Multi-cloud</p>
+        <h1 id="sb-hero-title" class="sb-hero__title">Get production-ready,<br>one question at a time.</h1>
+        <p class="sb-hero__lead">
+          A living skill bank from 19 years in production: runbooks, notes and
+          <strong><span data-sb-count="questions">1,000+</span> real interview questions</strong>
+          from <span data-sb-count="companies">25</span> companies, answered the way a senior engineer would.
+        </p>
+        <div class="sb-hero__actions">
+          <a class="md-button md-button--primary" href="practice/">Start practising</a>
+          <a class="md-button" href="interview-prep/">Browse questions</a>
+        </div>
+      </div>
+      <div class="sb-term" aria-label="Example production incident" role="img">
+        <div class="sb-term__bar"><span></span><span></span><span></span><em>prod-eu-west-1</em></div>
+        <pre class="sb-term__body" id="sb-term"><code>$ kubectl get pods -n checkout
+NAME                        READY   STATUS             RESTARTS
+checkout-7d9f8c6b5-x2kq4    0/1     CrashLoopBackOff   7
+checkout-7d9f8c6b5-p9wzl    1/1     Running            0
+
+$ kubectl describe pod checkout-7d9f8c6b5-x2kq4
+    Last State:  Terminated
+      Reason:    OOMKilled
+      Exit Code: 137
+
+# What's your next command?</code></pre>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block content %}
+<div class="sb-home">
+
+  <section class="sb-progress" aria-labelledby="sb-progress-title">
+    <h2 id="sb-progress-title" class="sb-visually-hidden">Your progress</h2>
+    <div class="sb-stat sb-stat--ring">
+      <svg viewBox="0 0 120 120" class="sb-ring" aria-hidden="true">
+        <circle cx="60" cy="60" r="52" class="sb-ring__track"/>
+        <circle cx="60" cy="60" r="52" class="sb-ring__value" id="sb-ring-value"/>
+      </svg>
+      <div class="sb-stat__text">
+        <span class="sb-stat__num" id="sb-done">0</span>
+        <span class="sb-stat__label">of <span data-sb-count="questions">…</span> practised</span>
+      </div>
+    </div>
+    <div class="sb-stat">
+      <span class="sb-stat__num" id="sb-streak">0</span>
+      <span class="sb-stat__label">day streak</span>
+      <span class="sb-stat__hint" id="sb-streak-hint">Practise one card today to start a streak.</span>
+    </div>
+    <div class="sb-stat">
+      <span class="sb-stat__num"><span id="sb-today">0</span><small>/<span id="sb-goal">5</span></small></span>
+      <span class="sb-stat__label">today's goal</span>
+      <div class="sb-bar" aria-hidden="true"><span id="sb-today-bar"></span></div>
+    </div>
+    <div class="sb-stat">
+      <span class="sb-stat__num" id="sb-level">Level 1</span>
+      <span class="sb-stat__label" id="sb-level-name">Getting started</span>
+      <span class="sb-stat__hint" id="sb-level-next"></span>
+    </div>
+  </section>
+
+  <section class="sb-qotd" aria-labelledby="sb-qotd-title">
+    <div class="sb-qotd__head">
+      <h2 id="sb-qotd-title">Question of the day</h2>
+      <span class="sb-chip" id="sb-qotd-source">Loading…</span>
+    </div>
+    <p class="sb-qotd__q" id="sb-qotd-q">Loading today's question…</p>
+    <div class="sb-qotd__answer" id="sb-qotd-a" hidden></div>
+    <div class="sb-qotd__actions">
+      <button class="md-button md-button--primary" id="sb-qotd-reveal" type="button">Think, then reveal the answer</button>
+      <button class="md-button" id="sb-qotd-done" type="button" hidden>I knew this</button>
+      <button class="md-button" id="sb-qotd-next" type="button">Another question</button>
+    </div>
+  </section>
+
+  <section aria-labelledby="sb-paths-title">
+    <h2 id="sb-paths-title">Pick a path</h2>
+    <div class="sb-paths">
+      <a class="sb-path" href="practice/#core">
+        <span class="sb-path__kicker">Interview soon</span>
+        <strong>The core questions</strong>
+        <span>The questions asked at almost every company: CrashLoopBackOff, probes, Terraform state, NAT, SLOs.</span>
+        <span class="sb-path__meta" data-sb-path="core">…</span>
+      </a>
+      <a class="sb-path" href="practice/#big-tech">
+        <span class="sb-path__kicker">Senior and staff</span>
+        <strong>Big-tech scenarios</strong>
+        <span>Netflix, Uber, Cloudflare, Amazon, Nvidia: RCA drills, global rollouts and leadership rounds.</span>
+        <span class="sb-path__meta" data-sb-path="big-tech">…</span>
+      </a>
+      <a class="sb-path" href="practice/#topic-kubernetes">
+        <span class="sb-path__kicker">Deep dive</span>
+        <strong>Kubernetes, end to end</strong>
+        <span>Scheduling, networking, autoscaling, security and the failure modes behind them.</span>
+        <span class="sb-path__meta" data-sb-path="topic-kubernetes">…</span>
+      </a>
+      <a class="sb-path" href="practice/#topic-sre-observability">
+        <span class="sb-path__kicker">Reliability</span>
+        <strong>SRE and incidents</strong>
+        <span>SLOs, burn-rate alerts, Kafka lag, cascading failures and how to lead an incident.</span>
+        <span class="sb-path__meta" data-sb-path="topic-sre-observability">…</span>
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="sb-areas-title">
+    <h2 id="sb-areas-title">Skill areas</h2>
+    <div class="sb-areas" id="sb-areas">
+      <!-- filled by skillbank.js; static fallback below -->
+      <a class="sb-area" href="interview-prep/topics/kubernetes/"><strong>Kubernetes</strong></a>
+      <a class="sb-area" href="interview-prep/topics/aws-cloud/"><strong>AWS and cloud</strong></a>
+      <a class="sb-area" href="interview-prep/topics/terraform/"><strong>Terraform</strong></a>
+      <a class="sb-area" href="interview-prep/topics/sre-observability/"><strong>SRE and observability</strong></a>
+    </div>
+  </section>
+
+  <section class="sb-notes" aria-labelledby="sb-notes-title">
+    <h2 id="sb-notes-title">From my notebook</h2>
+    <div class="sb-notes__grid">
+      <a href="kubernetes/kubectl-troubleshooting/"><strong>kubectl troubleshooting runbook</strong><span>From "pod is broken" to root cause.</span></a>
+      <a href="sre/slos-and-error-budgets/"><strong>SLOs and error budgets</strong><span>Downtime tables, burn-rate alerts, PromQL.</span></a>
+      <a href="sre/incident-response/"><strong>Incident response</strong><span>Roles, severities and the first 15 minutes.</span></a>
+      <a href="linux/troubleshooting/"><strong>Linux: the first 60 seconds</strong><span>Ten commands for a slow host.</span></a>
+      <a href="cloud/"><strong>AWS, Azure and GCP side by side</strong><span>The same need, three clouds.</span></a>
+      <a href="security/"><strong>Cloud security path</strong><span>Where I'm heading next.</span></a>
+    </div>
+  </section>
+
+  <section class="sb-about">
+    <p>
+      Built and maintained by a Senior Cloud Reliability Engineer in Amsterdam ·
+      CKA · AWS SAA · GCP ACE · AZ-104.
+      Progress is saved only in your browser.
+      <a href="about/">About me →</a>
+    </p>
+  </section>
+</div>
+{% endblock %}

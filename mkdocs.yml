@@ -8,6 +8,10 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: overrides
+  font:
+    text: IBM Plex Sans
+    code: JetBrains Mono
   language: en
   icon:
     logo: material/server-network
@@ -15,15 +19,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
@@ -39,6 +43,9 @@ theme:
     - content.code.annotate
     - content.action.edit
     - toc.follow
+
+hooks:
+  - hooks/questions.py
 
 plugins:
   - search
@@ -73,6 +80,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Practice: practice.md
   - About me: about.md
   - Kubernetes:
       - kubernetes/index.md
@@ -139,6 +147,12 @@ nav:
   - Templates:
       - Skill note template: note-template/skill-note.md
   - Tags: tags.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/skillbank.js
 
 extra:
   social:
