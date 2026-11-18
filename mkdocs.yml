@@ -1,8 +1,8 @@
 site_name: DevOps & SRE Skill Bank
 site_description: Notes, runbooks and hands-on skills in DevOps, SRE, Kubernetes and multi-cloud.
-# Change YOUR_GITHUB_USERNAME to your GitHub username (lowercase)
-site_url: https://YOUR_GITHUB_USERNAME.github.io/devops-skill-bank/
-repo_url: https://github.com/YOUR_GITHUB_USERNAME/devops-skill-bank
+# Change mrsathis to your GitHub username (lowercase)
+site_url: https://mrsathis.github.io/devops-skill-bank/
+repo_url: https://github.com/mrsathis/devops-skill-bank
 repo_name: devops-skill-bank
 edit_uri: edit/main/docs/
 
@@ -95,6 +95,47 @@ nav:
       - Troubleshooting: linux/troubleshooting.md
   - Security:
       - security/index.md
+  - Interview prep:
+      - interview-prep/index.md
+      - Core answers: interview-prep/core-answers.md
+      - By company:
+          - Accenture: interview-prep/companies/accenture.md
+          - Airbnb: interview-prep/companies/airbnb.md
+          - Amazon: interview-prep/companies/amazon.md
+          - AWS: interview-prep/companies/aws.md
+          - Atlassian: interview-prep/companies/atlassian.md
+          - Barclays: interview-prep/companies/barclays.md
+          - Big 4 (not named): interview-prep/companies/big4-aws-devops.md
+          - Cloudflare: interview-prep/companies/cloudflare.md
+          - Deloitte: interview-prep/companies/deloitte.md
+          - HashedIn by Deloitte: interview-prep/companies/hashedin-deloitte.md
+          - HCLTech: interview-prep/companies/hcltech.md
+          - Infosys: interview-prep/companies/infosys.md
+          - J.P. Morgan: interview-prep/companies/jp-morgan.md
+          - JioHotstar: interview-prep/companies/jiohotstar.md
+          - LinkedIn: interview-prep/companies/linkedin.md
+          - Meesho: interview-prep/companies/meesho.md
+          - Mphasis: interview-prep/companies/mphasis.md
+          - Netflix: interview-prep/companies/netflix.md
+          - Nvidia: interview-prep/companies/nvidia.md
+          - Paytm: interview-prep/companies/paytm.md
+          - Siemens: interview-prep/companies/siemens.md
+          - Tesla: interview-prep/companies/tesla.md
+          - Think Future Technologies: interview-prep/companies/think-future.md
+          - Uber: interview-prep/companies/uber.md
+          - Wipro: interview-prep/companies/wipro.md
+      - Company not named:
+          - Kubernetes: interview-prep/topics/kubernetes.md
+          - Docker: interview-prep/topics/docker.md
+          - Terraform: interview-prep/topics/terraform.md
+          - CI/CD and Git: interview-prep/topics/cicd-git.md
+          - AWS and cloud: interview-prep/topics/aws-cloud.md
+          - Azure: interview-prep/topics/azure.md
+          - Linux and networking: interview-prep/topics/linux-networking.md
+          - SRE and observability: interview-prep/topics/sre-observability.md
+          - Architecture and leadership: interview-prep/topics/architecture-leadership.md
+          - FinOps: interview-prep/topics/finops.md
+          - General: interview-prep/topics/general-devops.md
   - Templates:
       - Skill note template: note-template/skill-note.md
   - Tags: tags.md
@@ -102,7 +143,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/YOUR_GITHUB_USERNAME
+      link: https://github.com/mrsathis
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/YOUR_LINKEDIN/
 

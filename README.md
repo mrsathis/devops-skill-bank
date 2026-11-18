@@ -5,12 +5,12 @@ My personal knowledge base for DevOps, SRE, Kubernetes and multi-cloud: notes, r
 Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and hosted free on GitHub Pages.
 Every push to `main` builds and deploys the site through GitHub Actions.
 
-**Live site:** https://YOUR_GITHUB_USERNAME.github.io/devops-skill-bank/
+**Live site:** https://mrsathis.github.io/devops-skill-bank/
 
 ## First-time setup
 
 1. Create an empty **public** repo on GitHub named `devops-skill-bank` (no README, no .gitignore).
-2. Replace `YOUR_GITHUB_USERNAME` (and `YOUR_LINKEDIN`) in `mkdocs.yml`, `README.md` and `docs/about.md`.
+2. Replace `YOUR_LINKEDIN` in `mkdocs.yml` and `docs/about.md` with your LinkedIn profile name.
 3. Push this folder:
 
    ```bash
@@ -18,7 +18,7 @@ Every push to `main` builds and deploys the site through GitHub Actions.
    git init -b main
    git add .
    git commit -m "Initial skill bank site"
-   git remote add origin https://github.com/YOUR_GITHUB_USERNAME/devops-skill-bank.git
+   git remote add origin https://github.com/mrsathis/devops-skill-bank.git
    git push -u origin main
    ```
 
@@ -60,5 +60,5 @@ docs/
 ## Custom domain (optional)
 
 Add a file `docs/CNAME` containing your domain (e.g. `skills.example.com`), create a DNS `CNAME`
-record pointing to `YOUR_GITHUB_USERNAME.github.io`, then set the domain under **Settings → Pages**
+record pointing to `mrsathis.github.io`, then set the domain under **Settings → Pages**
 and tick **Enforce HTTPS**.
